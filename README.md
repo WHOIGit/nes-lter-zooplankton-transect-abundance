@@ -1,3 +1,3 @@
-# minimal-edi-package
-Minimal EML assembly line example, including a small subset of an NES-LTER
-dataset.
+# nes-lter-zooplankton-transect-abundance
+Data package prepared for EDI:
+Zooplankton abundance from net tows on Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018

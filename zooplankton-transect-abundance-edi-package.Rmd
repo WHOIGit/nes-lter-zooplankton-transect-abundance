@@ -1,0 +1,91 @@
+---
+title: "NES-LTER zooplankton transect abundance"
+author: "Stace Beaulieu"
+date: "2023-05-16"
+output: html_notebook
+---
+
+Libraries used
+
+```{r}
+# two of the required packages are installed from GitHub
+# library(remotes)
+# remotes::install_github("EDIorg/EMLassemblyline")
+# remotes::install_github("WHOIGit/ediutilities")
+
+library(EMLassemblyline)
+library(ediutilities)
+library(here)
+library(lubridate)
+library(readxl) # data provided in ExCEL sheet downloaded from Google sheet
+ 
+```
+
+Read data table
+
+```{r}
+# data_table <- read.csv(here('nes-lter-minimal.csv'))
+# data_table$date = ymd_hms(data_table$date)
+
+# read data table from local file
+# download the latest version from Llopiz lab Google folder
+# do not commit or push the data table
+data_table <- read_excel("nes-lter-zooplankton-transect-abundance-335um_20230516.xlsx", sheet = "data", col_names = TRUE)
+# note this version data table does not include a date column
+
+# truncate to two past decimal prior to summary
+
+
+```
+
+Generate basic summary of data table
+
+```{r}
+# Just for inspecting the summary: change all character columns to factor
+DF <- data_table
+DF[sapply(DF, is.character)] <- lapply(DF[sapply(DF, is.character)], as.factor)
+summary(DF)
+# summary(data_table)
+
+```
+
+Write data table to csv
+
+```{r}
+
+# can write to csv because the data_table is already clean and ready to submit  
+write.csv(data_table, 'nes-lter-zooplankton-transect-abundance-335um.csv', row.names=FALSE)
+
+```
+
+Read the Excel metadata template and generate text templates used by
+EMLassemblyline
+
+```{r}
+# excel_to_template(here('nes-lter-minimal-info'), 'nes-lter-minimal', rights='CC0')
+excel_to_template(here('nes-lter-zooplankton-transect-abundance-335um-info'), 'nes-lter-zooplankton-transect-abundance-335um', rights='CCBY')
+
+```
+Generate the package and insert the parent project node into the resulting EML
+
+```{r}
+# package ID 25
+pkg_id <- 'knb-lter-nes.25.1'
+
+make_eml(here(),
+         dataset.title='Zooplankton abundance from net tows on Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018',
+         data.table='nes-lter-zooplankton-transect-abundance-335um.csv',
+         data.table.description='Zooplankton abundance from bongo tows with 335 um mesh net on NES-LTER Transect cruises',
+         data.table.name = 'nes-lter-zooplankton-transect-abundance-335um',
+#         temporal.coverage = temporal_coverage(data_table$date),
+         temporal.coverage = c('2018-01-31', '2020-10-18'), # from NES-LTER_TOW_data
+         geographic.description = "NES-LTER Transect",
+#         geographic.coordinates = geographic_coordinates(data_table$latitude, data_table$longitude),
+         geographic.coordinates = c(41.5240, -70.8739, 39.7596, -71.1344), # from NES-LTER_TOW_data
+         maintenance.description = "ongoing",
+         user.id = "NES",
+         user.domain = "LTER",
+         package.id = pkg_id)
+
+project_insert(pkg_id,'parent_project_RAPID.xml')
+```

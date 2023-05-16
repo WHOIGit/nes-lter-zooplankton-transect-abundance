@@ -29,7 +29,12 @@ data_table$date = ymd_hms(data_table$date)
 Generate basic summary of data table
 
 ```{r}
-summary(data_table)
+# Just for inspecting the summary: change all character columns to factor
+DF <- data_table
+DF[sapply(DF, is.character)] <- lapply(DF[sapply(DF, is.character)], as.factor)
+summary(DF)
+# summary(data_table)
+
 ```
 
 Read the Excel metadata template and generate text templates used by

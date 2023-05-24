@@ -1,7 +1,7 @@
 ---
 title: "NES-LTER zooplankton transect abundance"
 author: "Stace Beaulieu"
-date: "2023-05-16"
+date: "2023-05-24"
 output: html_notebook
 ---
 
@@ -53,7 +53,8 @@ Write data table to csv
 
 ```{r}
 
-# can write to csv because the data_table is already clean and ready to submit  
+# can write to csv because the data_table is already clean and ready to submit
+# do not commit or push the data table
 write.csv(data_table, 'nes-lter-zooplankton-transect-abundance-335um.csv', row.names=FALSE)
 
 ```
@@ -63,6 +64,8 @@ EMLassemblyline
 
 ```{r}
 # excel_to_template(here('nes-lter-minimal-info'), 'nes-lter-minimal', rights='CC0')
+# to prepare the -info.xlsx file download the latest version from Llopiz lab Google folder
+# then delete the data sheet and save with filename -info
 excel_to_template(here('nes-lter-zooplankton-transect-abundance-335um-info'), 'nes-lter-zooplankton-transect-abundance-335um', rights='CCBY')
 
 ```
@@ -77,6 +80,10 @@ make_eml(here(),
          data.table='nes-lter-zooplankton-transect-abundance-335um.csv',
          data.table.description='Zooplankton abundance from bongo tows with 335 um mesh net on NES-LTER Transect cruises',
          data.table.name = 'nes-lter-zooplankton-transect-abundance-335um',
+# do not commit or push the other entity
+         other.entity = 'NES-LTER_TOW_data.csv', # prepare csv as subset of NES-LTER_TOW_data Google sheet
+         other.entity.name = 'NES-LTER tow metadata',
+         other.entity.description = 'Supplemental table for the tow metadata',         
 #         temporal.coverage = temporal_coverage(data_table$date),
          temporal.coverage = c('2018-01-31', '2020-10-18'), # from NES-LTER_TOW_data
          geographic.description = "NES-LTER Transect",

@@ -18,6 +18,7 @@ library(ediutilities)
 library(here)
 library(lubridate)
 library(readxl) # data provided in ExCEL sheet downloaded from Google sheet
+library(dplyr)
  
 ```
 
@@ -32,9 +33,16 @@ Read data table
 # do not commit or push the data table
 data_table <- read_excel("nes-lter-zooplankton-transect-abundance-335um_20230516.xlsx", sheet = "data", col_names = TRUE)
 # note this version data table does not include a date column
+# columns with NA's in Google sheet get read in as character
+# change NA strings to NA's
+data_table[data_table == "NA"] <- NA
+# then change those columns to numeric using dplyr functions
+data_table <- data_table %>%
+     mutate(across(MVCO:L11, as.numeric)) 
 
 # truncate to two past decimal prior to summary
-
+data_table <- data_table %>%
+     mutate(across(MVCO:L11, ~ round(., 2))) 
 
 ```
 

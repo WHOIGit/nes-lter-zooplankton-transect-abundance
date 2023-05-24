@@ -232,8 +232,8 @@ preparation, and QA/QC, among other things.
       <entityDescription>Zooplankton abundance from bongo tows with 335 um mesh net on NES-LTER Transect cruises</entityDescription>
       <physical>
         <objectName>nes-lter-zooplankton-transect-abundance-335um.csv</objectName>
-        <size unit="bytes">15459</size>
-        <authentication method="MD5">8287a1d8aa2cde85156752db21ae61d8</authentication>
+        <size unit="bytes">8306</size>
+        <authentication method="MD5">8b78f0307fe79ccd6f1b8b4a1adb37d4</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -318,7 +318,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">75816.3278576455</maximum>
+                  <maximum exclusive="false">75816.33</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -341,7 +341,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">52334.8617710979</maximum>
+                  <maximum exclusive="false">52334.86</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -364,7 +364,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">341310.977444692</maximum>
+                  <maximum exclusive="false">341310.98</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -387,7 +387,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">134047.538762795</maximum>
+                  <maximum exclusive="false">134047.54</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -410,7 +410,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">43639.3380276903</maximum>
+                  <maximum exclusive="false">43639.34</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -433,7 +433,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">49509.7509995317</maximum>
+                  <maximum exclusive="false">49509.75</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -456,7 +456,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">34147.2772662815</maximum>
+                  <maximum exclusive="false">34147.28</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -479,7 +479,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">80886.7959618904</maximum>
+                  <maximum exclusive="false">80886.8</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -502,7 +502,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">11913.8254576824</maximum>
+                  <maximum exclusive="false">11913.83</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -525,7 +525,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">25627.2214606751</maximum>
+                  <maximum exclusive="false">25627.22</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -548,7 +548,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">27750.9655185676</maximum>
+                  <maximum exclusive="false">27750.97</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -571,7 +571,7 @@ preparation, and QA/QC, among other things.
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">11047.4885351518</maximum>
+                  <maximum exclusive="false">11047.49</maximum>
                 </bounds>
               </numericDomain>
             </ratio>

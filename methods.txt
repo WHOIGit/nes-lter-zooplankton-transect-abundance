@@ -1,2 +1,25 @@
-This would contain a description of methods used in data collection,
-preparation, and QA/QC, among other things.
+# Field operations for net tows
+
+Zooplankton are collected with 61-cm diameter bongo nets, one of which has 335 micron mesh and the other 150 micron mesh. A General Oceanics mechanical flowmeter is attached in the center of each mouth. Tows are single oblique (down then up only once) towing at a speed through the water of 1.5 to 2.0 knots. Target net depth is 5 m off the bottom or 200 m (when bottom depth exceeds 200 m).
+Sampling metadata are in the supplemental file NES-LTER_TOW_data.csv.
+
+Net tows are logged in: Northeast U.S. Shelf LTER and H.M. Sosik. 2022. Event logs from Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2017 ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/e5289f602facb4579f825cfc71aceddd 
+
+Field operations for net tows are summarized in: Glancy, S.G. and J.K. Llopiz. 2023. Zooplankton sample inventory for Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2017 ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/f68b449c7551fbe38ddd8e85c8f0da9f
+
+# Sampling protocols
+
+This data package targets the 335 micron mesh net, 3/4 split into 5% buffered formalin-seawater solution (for morphological IDs — to NOAA). Data in this package are for samples listed with purpose as morphID and PI recipient David Richardson in: Glancy, S.G. and J.K. Llopiz. 2023. Zooplankton sample inventory for Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2017 ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/f68b449c7551fbe38ddd8e85c8f0da9f
+
+# Morphological identification
+
+Zooplankton taxa from the 335 micron net are sorted, identified, and enumerated by staff at the Sea Fisheries Institute in Poland according to Northeast Fisheries Science Center (NEFSC) Sorting Protocols. Note that some zooplankton taxa were not included in this data package (e.g., Cnidaria, Gastropoda).
+
+# Calculations: Abundance
+
+The same 14 taxa were assessed per cruise. Some specimens sorted to lowest taxonomic level were grouped into these 14 taxa at higher rank; note Copepoda is for copepods other than the named copepod taxa in the data table. Zero = absent in sample. We calculated abundance as number per m2 at each station by multiplying the number per volume (m3) by the depth sampled (m). 
+Cruise AR38 had 2 tows at station L3; we provide abundance for the tow on 2019-09-22.
+
+# Data package assembly
+
+We obtained geographic and temporal coverage from the NES-LTER_TOW_data. Data package assembly was completed in R, with documentation available at https://github.com/WHOIGit/nes-lter-zooplankton-transect-abundance.

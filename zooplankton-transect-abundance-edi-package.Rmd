@@ -1,7 +1,7 @@
 ---
 title: "NES-LTER zooplankton transect abundance"
 author: "Stace Beaulieu"
-date: "2023-05-24"
+date: "2023-05-31"
 output: html_notebook
 ---
 
@@ -31,7 +31,7 @@ Read data table
 # read data table from local file
 # download the latest version from Llopiz lab Google folder
 # do not commit or push the data table
-data_table <- read_excel("nes-lter-zooplankton-transect-abundance-335um_20230516.xlsx", sheet = "data", col_names = TRUE)
+data_table <- read_excel("nes-lter-zooplankton-transect-abundance-335um_20230531.xlsx", sheet = "data", col_names = TRUE)
 # note this version data table does not include a date column
 # columns with NA's in Google sheet get read in as character
 # change NA strings to NA's
@@ -86,7 +86,7 @@ pkg_id <- 'knb-lter-nes.25.1'
 make_eml(here(),
          dataset.title='Zooplankton abundance from net tows on Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018',
          data.table='nes-lter-zooplankton-transect-abundance-335um.csv',
-         data.table.description='Zooplankton abundance from bongo tows with 335 um mesh net on NES-LTER Transect cruises',
+         data.table.description='Zooplankton abundance from bongo tows with 335 micron mesh net on NES-LTER Transect cruises',
          data.table.name = 'nes-lter-zooplankton-transect-abundance-335um',
 # do not commit or push the other entity
          other.entity = 'NES-LTER_TOW_data.csv', # prepare csv as subset of NES-LTER_TOW_data Google sheet

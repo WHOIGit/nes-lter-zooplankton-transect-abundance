@@ -19,6 +19,7 @@ Zooplankton taxa from the 335 micron net are sorted, identified, and enumerated 
 
 The same 14 taxa were assessed per cruise. Some specimens sorted to lowest taxonomic level were grouped into these 14 taxa at higher rank; note Copepoda is for copepods other than the named copepod taxa in the data table. Zero = absent in sample. We calculated abundance as number per m2 at each station by multiplying the number per volume (m3) by the depth sampled (m). 
 Cruise AR38 had 2 tows at station L3; we provide abundance for the tow on 2019-09-22.
+Abundances are not provided for cruises EN627 or EN644 due to issues with the flowmeter.
 
 # Data package assembly
 

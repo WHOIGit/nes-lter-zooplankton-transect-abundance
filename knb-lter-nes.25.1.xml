@@ -49,7 +49,7 @@
       <organizationName>Northeast Fisheries Science Center</organizationName>
       <role>technician</role>
     </associatedParty>
-    <pubDate>2023-05-31</pubDate>
+    <pubDate>2023-06-02</pubDate>
     <abstract>
       <para>Zooplankton are sampled on Northeast U.S. Shelf Long-Term Ecological Research (NES-LTER) Transect cruises in summer and winter seasons in oblique tows with a bongo net equipped with two mesh sizes (335 micron and 150 micron). Tows are conducted at standard stations L1 to L11 along longitude 70 deg 53 min W extending southward from near Martha’s Vineyard, Massachusetts, to approximately 150 km offshore. Counts for taxa morphologically identified from the 335 micron net were provided by the Northeast Fisheries Science Center of the NOAA National Marine Fisheries Service. Counts were divided by volume and multiplied by depth sampled for abundance as per meter squared. The first version of this data package provides the abundance of 14 taxa from the 335 micron net for cruises in 2018 - 2020 in a described data table, as well as a supplemental table for the tow metadata.
 </para>
@@ -129,7 +129,8 @@ Sampling metadata are in the supplemental file NES-LTER_TOW_data.csv.</para>
           <para>Zooplankton taxa from the 335 micron net are sorted, identified, and enumerated by staff at the Sea Fisheries Institute in Poland according to Northeast Fisheries Science Center (NEFSC) Sorting Protocols. Note that some zooplankton taxa were not included in this data package (e.g., Cnidaria, Gastropoda).</para>
           <para># Calculations: Abundance</para>
           <para>The same 14 taxa were assessed per cruise. Some specimens sorted to lowest taxonomic level were grouped into these 14 taxa at higher rank; note Copepoda is for copepods other than the named copepod taxa in the data table. Zero = absent in sample. We calculated abundance as number per m2 at each station by multiplying the number per volume (m3) by the depth sampled (m). 
-Cruise AR38 had 2 tows at station L3; we provide abundance for the tow on 2019-09-22.</para>
+Cruise AR38 had 2 tows at station L3; we provide abundance for the tow on 2019-09-22.
+Abundances are not provided for cruises EN627 or EN644 due to issues with the flowmeter.</para>
           <para># Data package assembly</para>
           <para>We obtained geographic and temporal coverage from the NES-LTER_TOW_data. Data package assembly was completed in R, with documentation available at https://github.com/WHOIGit/nes-lter-zooplankton-transect-abundance.</para>
         </description>

@@ -1,2 +1,0 @@
-﻿This data package includes data from an MIT-WHOI Joint Program (JP) cruise funded by WHOI Academic Programs Office, with Chief Scientist Glen Gawarkiewicz (AR38).
-We’d like to thank additional personnel who conducted bongo tow sampling on Transect cruises, including Stace Beaulieu, Julia Cox, Thomas Heine, John San Soucie, and Justin Suca.

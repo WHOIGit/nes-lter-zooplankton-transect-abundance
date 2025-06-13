@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="knb-lter-nes.25.2" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="edi">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>uid=NES,o=LTER,dc=ecoinformatics,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Zooplankton abundance from net tows on Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018</title>
+    <creator>
+      <individualName>
+        <givenName>Alexandra</givenName>
+        <givenName>C</givenName>
+        <surName>Cabanelas</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>acabanelas@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-6224-077X</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Joel</givenName>
+        <givenName>K</givenName>
+        <surName>Llopiz</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>jllopiz@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-7584-7471</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>David</givenName>
+        <givenName>E</givenName>
+        <surName>Richardson</surName>
+      </individualName>
+      <organizationName>Northeast Fisheries Science Center</organizationName>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Harvey</givenName>
+        <surName>Walsh</surName>
+      </individualName>
+      <organizationName>Northeast Fisheries Science Center</organizationName>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Heidi</givenName>
+        <givenName>M</givenName>
+        <surName>Sosik</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Megan</givenName>
+        <surName>Ferguson</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>megan.ferguson@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0009-0002-4496-6600</userId>
+      <role>technician</role>
+    </associatedParty>
+    <pubDate>2025-06-13</pubDate>
+    <abstract>
+      <para>This data package provides abundance data for zooplankton collected during seasonal transect cruises conducted as part of the Northeast U.S. Shelf Long-Term Ecological Research (NES-LTER) program, ongoing since 2018. Zooplankton are collected at standard NES-LTER transect stations (L1–L11) and the Martha’s Vineyard Coastal Observatory (MVCO) via oblique tows, using a 61-cm Bongo net with two mesh sizes (335 µm and 150 µm). The transect extends southward from near Martha’s Vineyard, Massachusetts, reaching approximately 150 km offshore along longitude 70 deg 53 min W, covering the continental shelf from nearshore to the shelf break, with sampling depths between 20 and 200 meters. Only the 335-µm mesh data is included here, as samples from this net are preserved on board and shipped to Morski Instytut Rybacki in Szczecin, Poland, where they are counted and identified to the lowest possible taxonomic level. Counts of taxa identified are provided by the NOAA’s Northeast Fisheries Science Center. Samples from the 150 um are preserved for other purposes and will be published as a separate data package. This second version of the data package includes staged and unstaged abundance data in volumetric (100 m³) and aerial (10 m²) units from the 335-µm net. Supplemental tables provide metadata for the cruises and stations. </para>
+      <para/>
+    </abstract>
+    <keywordSet>
+      <keyword>populations</keyword>
+      <keywordThesaurus>LTER Core Research Areas</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>zooplankton</keyword>
+      <keyword>abundance</keyword>
+      <keyword>transects</keyword>
+      <keyword>marine</keyword>
+      <keyword>oceanography</keyword>
+      <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Bongo net</keyword>
+      <keywordThesaurus>SeaVoX Device Catalogue</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Single net or net pair oblique tow</keyword>
+      <keywordThesaurus>BODC Sampling net gear deployment vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Northeast U.S. Continental Shelf</keyword>
+      <keywordThesaurus>NOAA Large Marine Ecosystems</keywordThesaurus>
+    </keywordSet>
+    <additionalInfo>
+      <para>This data package includes data from Massachusetts Institute of Technology – Woods Hole Oceanographic Institution Joint Program (MIT-WHOI JP) cruises, funded by WHOI Academic Programs Office, with Chief Scientists Glen Gawarkiewicz (AR38) and Joel Llopiz (AR32 and AR63). For other cruises on R/V Neil Armstrong, we thank the Ocean Observatories Initiative, funded by the National Science Foundation under Cooperative Agreement No. 1743430. We would like to thank additional personnel who conducted Bongo tow sampling on transect cruises, including Stace Beaulieu, Julia Cox, Thomas Heine, John San Soucie, Sarah G. Glancy, Isabel Honda, Taylor Crockford, Emily Peacock, Diana Fontaine, Julia Cox, Thomas Heine, Pierre Marrec, Adrienne Breef-Pilz, Helena McMonagle, and Justin Suca. Thank you to Megan Ferguson for her invaluable help during research cruises, Bongo tow collections, and ensuring samples are properly preserved and sent to the appropriate labs. We also extend our thanks to the scientists of the NOAA Northeast Fisheries Science Center (NEFSC) EcoMon program, as well as the associated scientists and staff at both the NEFSC and Morski Instytut Rybacki in Szczecin, Poland.
+</para>
+    </additionalInfo>
+    <intellectualRights>
+      <para>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>NES-LTER Transect</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-71.1344</westBoundingCoordinate>
+          <eastBoundingCoordinate>-70.8739</eastBoundingCoordinate>
+          <northBoundingCoordinate>41.524</northBoundingCoordinate>
+          <southBoundingCoordinate>39.7596</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2018-01-31</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2023-08-12</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>ongoing</description>
+    </maintenance>
+    <contact>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <positionName>Nes-Lter Information Manager</positionName>
+      <electronicMailAddress>lter-nes-info@whoi.edu</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <markdown># Field Operations and Sampling Protocols for Net Tows
+During dedicated Northeast U.S. Shelf Long-Term Ecological Research (NES-LTER) transect cruises, zooplankton sampling is conducted at each standard transect station (L1 – L11) and near the Martha’s Vineyard Coastal Observatory (MVCO). Zooplankton are collected with a 61-cm diameter Bongo net, equipped with two nets of different mesh sizes (335-µm and 150-µm). Each net is 3.2 m in length, conically shaped, and tapers down to a detachable codend, with porosities of 45% and 46%, respectively. A General Oceanics mechanical flowmeter is mounted at the center of each net’s mouth to quantify the volume of water filtered. A Star-Oddi DST centi-TD temperature-depth recorder (TDR) is attached to the bongo frame to record the net’s maximum depth, tow trajectory, and water temperature at a 1-second recording interval. TDR data is downloaded after the tow is completed. For select cruises, a SeaBird SBE 9plus CTD is mounted on the Bongo wire above the nets to obtain real-time depth data. While towing, the net’s depth is checked by monitoring wire angle using a handheld inclinometer and amount of wire paid out. Zooplankton sampling tows are conducted as single oblique (descending and ascending once) at a speed through the water of 1.5 to 2.0 knots. The target net depth is 5 m above the seafloor or 200 m when bottom depth exceeds 200 m. Winch pay-out and retrieval speeds follow NOAA’s EcoMon protocol and vary depending on the target sampling depth. For depths greater than 60 m, the maximum pay-out speed is 30 m/min, and the retrieval speed is 20 m/min. Pay-out speed is always faster than retrieval speed. The bongo frame is secured to the end of the wire using a shackle, and a 1.5 ft chain section and 45 kg weight are attached to the bottom of the frame. 
+
+Upon retrieval, the nets are rinsed on the outside with seawater to ensure that all plankton are collected in the cod ends. Once the water level is below the opening, the cod ends are carefully removed, and the nets are placed in labeled buckets designated for each mesh size (335-µm and 150-µm). These labeled cod ends are then brought to the wet lab for processing. Samples are split using a Folsom splitter, following an established splitting protocol, with aliquots preserved in a 5% buffered formalin-seawater solution, 95% ethanol, or frozen, according to the specific analysis to be performed. 
+For samples collected with the 335-µm mesh net, the split is as follows:
+* ¾ split for morphological identification by the Plankton Sorting and Identification Center in Poland, as part of a collaboration with NOAA Fisheries.
+* ¼ split for DNA barcoding, sent to the Rynearson Laboratory at the University of Rhode Island. 
+This package includes data of samples from the ¾ morphological identification fraction of the 335 µm mesh net, which are preserved in a 5% buffered formalin-seawater solution. 
+Samples from the 150-µm mesh net, which serve different purposes, will be published as a separate data package. Additionally, a small ring net attached to the same wire above the Bongo is used to collect size-fractionated samples for stable isotope analysis, which will be included in a separate package.
+
+Four data files are included in this package, providing detailed sample information in different formats:
+
+* nes-lter-zooplankton-abundance-335um-unstaged10m2.csv: Contains aerial abundance data for zooplankton collected with the 335-µm mesh net, standardized to 10 square meters.
+* nes-lter-zooplankton-abundance-335um-unstaged100m3.csv: Contains volumetric abundance data for zooplankton collected with the 335-µm mesh net, standardized to 100 cubic meters.
+* nes-lter-zooplankton-abundance-335um-staged10m2.csv: Contains stage-specific abundance data standardized to 10 square meters.
+* nes-lter-zooplankton-abundance-335um-staged100m3.csv: Contains stage-specific abundance data, standardized to 100 cubic meters.
+
+The staged data include only the 15 taxa that are staged. 
+
+Cruise dates and research vessel information are in the file nes-lter-zp-cruises-metadata.csv. 
+
+Event logs of Bongo net tows were recorded onboard using the Rolling Deck to Repository (R2R) event logger (elog) software and are published in: 
+Northeast U.S. Shelf LTER, H.M. Sosik, and E.T. Crockford. 2025. Event logs from Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2017 ver 2. Environmental Data Initiative. https://doi.org/10.6073/pasta/0cde75ba26923d87e107a1c440613209 
+
+Updated event logs, detailed field operations, station-specific metadata, sample allocation information, and inventory of samples designated for morphological identification (PI recipient: David Richardson) can be found in:
+Cabanelas, A.C., M. Ferguson, J.K. Llopiz, and M. Sato. 2025. Zooplankton sample inventory for Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018 ver 2. Environmental Data Initiative. https://doi.org/10.6073/pasta/8ff3d6baebd5e10cf59c527da0081e4b 
+
+# Morphological identification
+Zooplankton collected with the 335 µm mesh net are divided into two fractions: ¾ of the sample is designated for morphological identification, and the remaining ¼ is used for DNA barcoding. The ¾ fraction for morphological identification is processed by staff at the Morski Instytut Rybacki (National Marine Fisheries Institute) Plankton Sorting and Identification Center in Szczecin, Poland, following Northeast Fisheries Science Center (NEFSC) sorting protocols. Samples are reduced to approximately 500 organisms by subsampling with a modified box splitter, after which zooplankton are sorted, counted, and identified to the lowest possible taxonomic level. Counts for each taxon are multiplied by the number of aliquots to estimate total sample abundance, which is then adjusted using standard haul factors. 
+
+Note: Copepoda refers to copepods that are not specifically named in the data table. A value of zero indicates absence in the sample. This version of the data package includes staged data, and both 100m³ and 10m² abundance values.
+
+Only selected taxa are staged, including: Calanus finmarchicus, Centropages typicus, Metridia lucens, Paracalanus parvus, Pseudocalanus minutus, Temora longicornis, Centropages hamatus, Nannocalanus minor, Clausocalanus arcuicornis, Euphausia krohnii, Thysanoessa gregaria, Thysanoessa longicaudata, Nematoscelis megalops, Thysanoessa raschii, Meganyctiphanes norvegica.
+
+These samples are processed following MARMAP NEFSC Sorting Protocols 5.3.1 ECOSYSTEM MONITORING - ZOOPLANKTON.
+Jossi, J. W., Griswold, C. A., Prezioso, J., Taylor, M., &amp; O’Reilly, J. Ecosystem Monitoring Program: Survey Operations Manual. http://globec.whoi.edu/BCO-DMO/Reports/Bongo-OperationsManual-2005.doc [details]
+https://demo.bco-dmo.org/publication/841674
+
+# Calculations
+## Abundance
+For Abundance per 10m2:
+A =  (C × Q × Z) / (V × 10) × (1 / Sf)
+For Abundance per 100m3:
+A =  (C × Q) / (V × 100) × (1 / Sf)
+Where:
+- A = abundance of organisms (individuals per 10 m² or 100 m³, depending on the equation)
+- C = number of organisms counted in the aliquot
+- Q = aliquot factor
+- Z = maximum tow depth (in meters)
+- V = volume of water filtered (in cubic meters)
+- Sf = sample split factor
+
+## Abundance Standardization 
+
+Abundances were normalized by incorporating the appropriate haul factor directly into the formulas for A (above). The haul factor standardizes organism counts to a consistent sampling unit: 10 m2 of surface area or 100 m3 of water volume. This standardization accounts for variations in tow depth and volume of water filtered across samples.
+### Haul Factor
+For 10 m2: (Z × 10) / V
+For 100 m3: 100 / V
+Where:
+- Z = maximum tow depth (in meters) 
+- V = volume of water filtered (in meters cubed) 
+
+## Volume of Water Filtered
+The volume of water filtered was calculated with a flowmeter using the following equation:
+V = (R)(Ff)(A),
+Where:
+- V = calculated volume of water filtered (in meters cubed)
+- R = number of flowmeter revolutions during tow
+- Ff = factory calibration factor (in meters per revolution) = 0.26873
+- A = area of net mouth (in meters squared) = 0.2922
+When flowmeters malfunctioned, such as in EN627, the volume of water sampled was calculated as: 
+V=(A) (T) (S)
+ 
+Where:
+- V = calculated volume of water filtered (in meters cubed)
+- A = area of net mouth (in meters squared) = 0.2922
+- T = duration of tow (in seconds)
+- S = ship speed during tow (in meters per second)
+
+These values can be found in the vol\_filtered\_335 column of the corresponding data inventory package [knb-lter-nes.24.2]. 
+
+## Day vs. Night Tow Classification
+
+The "day_night" column indicates whether the zooplankton tow occurred during the day or night. This was determined based on local time and sampling coordinates, with the R package suncalc (v0.5.1).  For this, the `getsunlightTimes` function was applied to calculate the times of sunrise (when the top edge of the sun appears on the horizon) and sunset (when the sun disappears below the horizon, evening civil twilight starts) for each sample. 
+
+Thieurmel B, Elmarhraoui A (2022). suncalc: Compute Sun Position, Sunlight Phases, Moon Position and Lunar Phase. R package version 0.5.1, &lt;https://CRAN.R-project.org/package=suncalc&gt;.
+
+# TDR Data 
+
+In some instances, the sampling depth (net maximum depth) was not recorded by the temperature-depth recorder (TDR) or the CTD attached to the bongo wire. Since this depth is necessary for calculating depth-integrated 10 m² abundances, when it was unavailable, maximum tow depth (in meters) was estimated using the following equation based on the straight cosine law:
+
+Z = L * cos(α)
+
+Where:
+- Z = estimated maximum tow depth (in meters)
+- L = length of wire paid out (in meters)
+- α = wire angle (in radians)
+
+Sampling depths can be found in the depth\_TDR and net\_max\_depth\_m columns in the corresponding data inventory package [knb-lter-nes.24.2].
+
+# Sampling Issues and Considerations
+
+Occasionally, the bongo net hits the seabed during the tow, resulting in missed samples when there is no time to redeploy. Whenever possible, the nets are rinsed and redeployed. In a few instances, the sand and/or mud was sieved, and samples preserved. These occurrences are documented in the comment columns. Every effort is made to sample all LTER transect stations (L1-L11) and MVCO, but weather conditions sometimes prevent sampling at all stations. As a result, data for certain stations may be limited or unavailable.
+# Data Flags
+Data quality flags were assigned following the Ocean Best Practices UNESCO 2013 IOC 54:V3 Primary Level Flagging standard. This standard uses a value system to indicate data quality:
+1: Good (passed documented required QC tests)
+2: Not evaluated, not available, or unknown (no QC test performed or information on quality is not available)
+3: Questionable/suspect (failed non-critical documented metric or subjective test(s))
+4: Bad (failed critical documented QC test(s) or as assigned by the data provider)
+9: Missing data (used as a placeholder when data are missing)
+Advanced Flagging Scheme
+In addition to the primary level flagging, the Ocean Best Practices UNESCO 2013 IOC 54:V3 standard also describes an advanced flagging scheme. This scheme provides more detailed information about the quality of oceanographic data and includes secondary level flags for additional documentation. 
+U.S. Integrated Ocean Observing System, 2020. Manual for the Use of Real-Time
+Oceanographic Data Quality Control Flags, Version 1.2. 24 pp. https://doi.org/10.25923/w8y6-d298 
+# Quality assurance and data package assembly
+Data package assembly was completed in R. To ensure the accuracy of the entries for physical samples from zooplankton net tows, data was validated using R. This involved checking for ranges of values and unique strings in each column. All coordinates were plotted on a map to ensure that the values were within reasonable ranges. Entries were cross-referenced with the scanned Bongo/Ring Event Log sheets and the event log for each cruise. Missing values were identified, and NAs assigned. 
+
+# Differences From Previous Version
+
+Version 1 of this data package included only unstaged abundance of 14 taxa. This second version of the data package includes staged and unstaged abundance data in volumetric (100 m³) and aerial (10 m²) units from the 335-µm net. Supplemental tables provide metadata for the cruises and stations. 
+
+
+# Related Packages 
+This is the second version of the NES-LTER zooplankton abundance data package [knb-lter-nes.25.2]. The previous data package [knb-lter-nes.25.1] included zooplankton abundance data for the following cruises: EN608, EN617, AR38, EN649, EN655, and EN657. This package adds abundance data for the following cruises: AR32, EN627, EN644, EN661, EN668, AR63, AT46, EN687, EN695, HRS2303, and EN706. Total # of cruises included: 17. 
+
+Other related packages include event log data package [knb-lter-nes.20.1], zooplankton abundance data package version 1 [knb-lter-nes.25.1], and zooplankton sample inventory [knb-lter-nes.24.2] for transect cruises. 
+
+</markdown>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>LTER: Scales of Variability in Ecosystem Dynamics and Production on the Changing Northeast U.S. Shelf (NES II)</title>
+      <personnel>
+        <individualName>
+          <givenName>Heidi</givenName>
+          <surName>Sosik</surName>
+        </individualName>
+        <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+        <role>Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Changsheng</givenName>
+          <surName>Chen</surName>
+        </individualName>
+        <electronicMailAddress>c1chen@umassd.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0001-8715-6101</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Rubao</givenName>
+          <surName>Ji</surName>
+        </individualName>
+        <electronicMailAddress>rji@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-8839-5427</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Joel</givenName>
+          <surName>Llopiz</surName>
+        </individualName>
+        <electronicMailAddress>jllopiz@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-7584-7471</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Susanne</givenName>
+          <surName>Menden-Deuer</surName>
+        </individualName>
+        <electronicMailAddress>smenden@uri.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-8434-4251</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Michael</givenName>
+          <surName>Neubert</surName>
+        </individualName>
+        <electronicMailAddress>mneubert@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0001-8820-5008</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Tatiana</givenName>
+          <surName>Rynearson</surName>
+        </individualName>
+        <electronicMailAddress>rynearson@uri.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-2951-0066</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mei</givenName>
+          <surName>Sato</surName>
+        </individualName>
+        <electronicMailAddress>msato@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-4860-2476</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Rachel</givenName>
+          <surName>Stanley</surName>
+        </individualName>
+        <electronicMailAddress>rstanle2@wellesley.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-4860-2476</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Weifeng</givenName>
+          <surName>Zhang</surName>
+        </individualName>
+        <electronicMailAddress>wzhang@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-2819-1780</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <abstract>
+        <para>The Northeast U.S. Shelf (NES) Long-Term Ecological Research (LTER) project integrates observations, experiments, and models to understand and predict how planktonic food webs are changing, and how those changes impact the productivity of higher trophic levels. The NES-LTER is co-located with the Northeast U.S. Continental Shelf Large Marine Ecosystem, spanning the Middle Atlantic Bight and Gulf of Maine. Our focal cross-shelf transect extends about 150 km southward from Martha’s Vineyard, MA, to just beyond the shelf break. Our overarching question is: How is climate change impacting the pelagic NES ecosystem and, in particular, affecting the relationship between compositional (e.g., species diversity and size structure) and aggregate (e.g., rates of primary production, and transfer of energy to important forage fish species) variability?</para>
+      </abstract>
+      <funding>
+        <para>NSF Award OCE-2322676</para>
+      </funding>
+      <relatedProject>
+        <title>LTER: Linking Pelagic Community Structure with Ecosystem Dynamics and Production Regimes on the Changing Northeast US Shelf (NES I)</title>
+        <personnel>
+          <individualName>
+            <givenName>Heidi</givenName>
+            <surName>Sosik</surName>
+          </individualName>
+          <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+          <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+          <role>Principal Investigator</role>
+        </personnel>
+        <funding>NSF Award OCE-1655686</funding>
+      </relatedProject>
+      <relatedProject>
+        <title>RAPID: Collaborative Research: Autumn transition in plankton ecology during an ocean heatwave on the Northeast U.S. Shelf</title>
+        <personnel>
+          <individualName>
+            <givenName>Heidi</givenName>
+            <surName>Sosik</surName>
+          </individualName>
+          <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+          <userId directory="https://orcid.org">0000-0002-4591-2842</userId>
+          <role>Principal Investigator</role>
+        </personnel>
+        <award>
+          <funderName>National Science Foundation</funderName>
+          <awardNumber>NSF Award OCE-210243</awardNumber>
+          <title>RAPID: Collaborative Research: Autumn transition in plankton ecology during an ocean heatwave on the Northeast U.S. Shelf</title>
+        </award>
+      </relatedProject>
+    </project>
+    <dataTable>
+      <entityName>abundance-335um-staged10m2</entityName>
+      <entityDescription>Staged zooplankton count and abundance at 10m2 haul factor</entityDescription>
+      <physical>
+        <objectName>nes-lter-zooplankton-transect-abundance-335um-staged10m2.csv</objectName>
+        <size unit="bytes">3403658</size>
+        <authentication method="MD5">8be3600c882da63f8d2a62bb5cc7ffdb</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>cruise</attributeName>
+          <attributeDefinition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>NES-LTER standard station nearest to the sample location</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>NES-LTER standard station nearest to the sample location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cast</attributeName>
+          <attributeDefinition>Tow number, sequential within cruise and matched to CTD rosette cast number</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">45</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date_time_utc</attributeName>
+          <attributeDefinition>Date and time (UTC) of the net deployment</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DDThh:mm:ssZ</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>day_night</attributeName>
+          <attributeDefinition>Indicates whether the bongo tow occurred during the day or night</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Day</code>
+                    <definition>Tow occurred during daylight hours</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Night</code>
+                    <definition>Tow occurred during night</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>haul_factor_10m2_335</attributeName>
+          <attributeDefinition>Surface area standard haul factor for the 335 micron net</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.23</minimum>
+                  <maximum exclusive="false">9.591</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>sample_split_factor</attributeName>
+          <attributeDefinition>The fraction of the original sample being examined.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>aliquot_factor</attributeName>
+          <attributeDefinition>Denominator of the fraction representing the portion of the original sample examined at this station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">2048</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_count</attributeName>
+          <attributeDefinition>The total number of zooplankton counted in a given sample, summed across all taxa within the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">98</minimum>
+                  <maximum exclusive="false">936</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_code</attributeName>
+          <attributeDefinition>Taxonomic MARMAP/EcoMon code</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">101</minimum>
+                  <maximum exclusive="false">2019</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_name</attributeName>
+          <attributeDefinition>Scientific name of the taxon associated with the sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name of the taxon associated with the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_count</attributeName>
+          <attributeDefinition>Taxon-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">674</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_abundance_10m2</attributeName>
+          <attributeDefinition>Taxon-specific zooplankton abundance, expressed as the number of individuals per 10 square meters (m2)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer10MeterSquared</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">3310155.587</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>stage</attributeName>
+          <attributeDefinition>Zooplankton life stage</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>adult</code>
+                    <definition>adult</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c5</code>
+                    <definition>copepodite stage 5 (CV)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c4</code>
+                    <definition>copepodite stage 4 (CIV</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c3</code>
+                    <definition>copepodite stage 3 (CII</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c2</code>
+                    <definition>copepodite stage 2 (CII</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c1</code>
+                    <definition>copepodite stage 1 (CI)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>cryptopia</code>
+                    <definition>cryptopia</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>furcilia</code>
+                    <definition>furcilia</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>calyptopis</code>
+                    <definition>calyptopis</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>nauplius</code>
+                    <definition>nauplius</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>unknown</code>
+                    <definition>unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>stage_count</attributeName>
+          <attributeDefinition>Life stage-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">446</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>stage_abundance_10m2</attributeName>
+          <attributeDefinition>Life stage-specific zooplankton abundance, expressed as the number of individuals per 10 square meters (m2)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer10MeterSquared</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">2243306.325</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>primary_flag</attributeName>
+          <attributeDefinition>IODE Quality Flag primary level</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>quality not evaluated, not available or unknown</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>questionable/suspect</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>bad</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>secondary_flag</attributeName>
+          <attributeDefinition>Additional documentation of data quality or concerns</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Additional documentation of data quality or concerns</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No secondary flag</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>28050</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>abundance-335um-staged100m3</entityName>
+      <entityDescription>Staged zooplankton count and abundance at 100m3 haul factor</entityDescription>
+      <physical>
+        <objectName>nes-lter-zooplankton-transect-abundance-335um-staged100m3.csv</objectName>
+        <size unit="bytes">3392713</size>
+        <authentication method="MD5">111caf69e46e1c6db5f8deef0b9567e4</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>cruise</attributeName>
+          <attributeDefinition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>NES-LTER standard station nearest to the sample location</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>NES-LTER standard station nearest to the sample location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cast</attributeName>
+          <attributeDefinition>Tow number, sequential within cruise and matched to CTD rosette cast number</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">45</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date_time_utc</attributeName>
+          <attributeDefinition>Date and time (UTC) of the net deployment</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DDThh:mm:ssZ</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>day_night</attributeName>
+          <attributeDefinition>Indicates whether the bongo tow occurred during the day or night</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Day</code>
+                    <definition>Tow occurred during daylight hours</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Night</code>
+                    <definition>Tow occurred during night</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>haul_factor_100m3_335</attributeName>
+          <attributeDefinition>Water volume standard haul factor for the 335 micron net</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.122</minimum>
+                  <maximum exclusive="false">2.746</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>sample_split_factor</attributeName>
+          <attributeDefinition>The fraction of the original sample being examined.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>aliquot_factor</attributeName>
+          <attributeDefinition>Denominator of the fraction representing the portion of the original sample examined at this station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">2048</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_count</attributeName>
+          <attributeDefinition>The total number of zooplankton counted in a given sample, summed across all taxa within the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">98</minimum>
+                  <maximum exclusive="false">936</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_code</attributeName>
+          <attributeDefinition>Taxonomic MARMAP/EcoMon code</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">101</minimum>
+                  <maximum exclusive="false">2019</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_name</attributeName>
+          <attributeDefinition>Scientific name of the taxon associated with the sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name of the taxon associated with the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_count</attributeName>
+          <attributeDefinition>Taxon-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">674</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_abundance_100m3</attributeName>
+          <attributeDefinition>Zooplankton abundance, expressed as the number of individuals per 100 cubic meters (m3).</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer100MeterCubed</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">959393.564</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>stage</attributeName>
+          <attributeDefinition>Zooplankton life stage</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>adult</code>
+                    <definition>adult</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c5</code>
+                    <definition>copepodite stage 5 (CV)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c4</code>
+                    <definition>copepodite stage 4 (CIV</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c3</code>
+                    <definition>copepodite stage 3 (CII</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c2</code>
+                    <definition>copepodite stage 2 (CII</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>c1</code>
+                    <definition>copepodite stage 1 (CI)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>cryptopia</code>
+                    <definition>cryptopia</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>furcilia</code>
+                    <definition>furcilia</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>calyptopis</code>
+                    <definition>calyptopis</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>nauplius</code>
+                    <definition>nauplius</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>unknown</code>
+                    <definition>unknown</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>stage_count</attributeName>
+          <attributeDefinition>Life stage-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">446</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>stage_abundance_100m3</attributeName>
+          <attributeDefinition>Life stage-specific zooplankton abundance, expressed as the number of individuals per 10 square meters (m2)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer100MeterCubed</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">635857.802</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>primary_flag</attributeName>
+          <attributeDefinition>IODE Quality Flag primary level</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>quality not evaluated, not available or unknown</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>questionable/suspect</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>bad</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>secondary_flag</attributeName>
+          <attributeDefinition>Additional documentation of data quality or concerns</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Additional documentation of data quality or concerns</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No secondary flag</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>28050</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>abundance-335um-unstaged10m2</entityName>
+      <entityDescription>Unstaged zooplankton count and abundance at 10m2 haul factor</entityDescription>
+      <physical>
+        <objectName>nes-lter-zooplankton-transect-abundance-335um-unstaged10m2.csv</objectName>
+        <size unit="bytes">2389255</size>
+        <authentication method="MD5">c54cc8eee5883bb9c6bfa4cbd409bd71</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>cruise</attributeName>
+          <attributeDefinition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>NES-LTER standard station nearest to the sample location</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>NES-LTER standard station nearest to the sample location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cast</attributeName>
+          <attributeDefinition>Tow number, sequential within cruise and matched to CTD rosette cast number</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">45</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date_time_utc</attributeName>
+          <attributeDefinition>Date and time (UTC) of the net deployment</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DDThh:mm:ssZ</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>day_night</attributeName>
+          <attributeDefinition>Indicates whether the bongo tow occurred during the day or night</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Day</code>
+                    <definition>Tow occurred during daylight hours</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Night</code>
+                    <definition>Tow occurred during night</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>haul_factor_10m2_335</attributeName>
+          <attributeDefinition>Surface area standard haul factor for the 335 micron net</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.23</minimum>
+                  <maximum exclusive="false">9.591</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>sample_split_factor</attributeName>
+          <attributeDefinition>The fraction of the original sample being examined.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>aliquot_factor</attributeName>
+          <attributeDefinition>Denominator of the fraction representing the portion of the original sample examined at this station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">2048</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_count</attributeName>
+          <attributeDefinition>The total number of zooplankton counted in a given sample, summed across all taxa within the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">98</minimum>
+                  <maximum exclusive="false">936</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_code</attributeName>
+          <attributeDefinition>Taxonomic MARMAP/EcoMon code</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">5150</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_name</attributeName>
+          <attributeDefinition>Scientific name of the taxon associated with the sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name of the taxon associated with the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_count</attributeName>
+          <attributeDefinition>Taxon-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">677</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_abundance_10m2</attributeName>
+          <attributeDefinition>Taxon-specific zooplankton abundance, expressed as the number of individuals per 10 square meters (m2)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer10MeterSquared</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">3310155.587</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>primary_flag</attributeName>
+          <attributeDefinition>IODE Quality Flag primary level</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>quality not evaluated, not available or unknown</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>questionable/suspect</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>bad</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>secondary_flag</attributeName>
+          <attributeDefinition>Additional documentation of data quality or concerns</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Additional documentation of data quality or concerns</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No secondary flag</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>23460</numberOfRecords>
+    </dataTable>
+    <dataTable>
+      <entityName>abundance-335um-unstaged100m3</entityName>
+      <entityDescription>Unstaged zooplankton count and abundance at 100m3 haul factor</entityDescription>
+      <physical>
+        <objectName>nes-lter-zooplankton-transect-abundance-335um-unstaged100m3.csv</objectName>
+        <size unit="bytes">2386006</size>
+        <authentication method="MD5">73311ad82e9929be4295405cfbe57079</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>cruise</attributeName>
+          <attributeDefinition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identifier for research cruise generally including abbreviation for research vessel and voyage number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>station</attributeName>
+          <attributeDefinition>NES-LTER standard station nearest to the sample location</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>NES-LTER standard station nearest to the sample location</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cast</attributeName>
+          <attributeDefinition>Tow number, sequential within cruise and matched to CTD rosette cast number</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">45</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date_time_utc</attributeName>
+          <attributeDefinition>Date and time (UTC) of the net deployment</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DDThh:mm:ssZ</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>day_night</attributeName>
+          <attributeDefinition>Indicates whether the bongo tow occurred during the day or night</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>Day</code>
+                    <definition>Tow occurred during daylight hours</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Night</code>
+                    <definition>Tow occurred during night</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>haul_factor_100m3_335</attributeName>
+          <attributeDefinition>Water volume standard haul factor for the 335 micron net</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.122</minimum>
+                  <maximum exclusive="false">2.746</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>sample_split_factor</attributeName>
+          <attributeDefinition>The fraction of the original sample being examined.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.1</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>aliquot_factor</attributeName>
+          <attributeDefinition>Denominator of the fraction representing the portion of the original sample examined at this station.</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>dimensionless</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">2048</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>total_count</attributeName>
+          <attributeDefinition>The total number of zooplankton counted in a given sample, summed across all taxa within the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">98</minimum>
+                  <maximum exclusive="false">936</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_code</attributeName>
+          <attributeDefinition>Taxonomic MARMAP/EcoMon code</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">2</minimum>
+                  <maximum exclusive="false">5150</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_name</attributeName>
+          <attributeDefinition>Scientific name of the taxon associated with the sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Scientific name of the taxon associated with the sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_count</attributeName>
+          <attributeDefinition>Taxon-specific count of zooplankton individuals in the analyzed portion of the sample</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>number</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>whole</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">677</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>taxon_abundance_100m3</attributeName>
+          <attributeDefinition>Zooplankton abundance, expressed as the number of individuals per 100 cubic meters (m3).</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>numberPer100MeterCubed</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">959393.564</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>Not available</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>primary_flag</attributeName>
+          <attributeDefinition>IODE Quality Flag primary level</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>1</code>
+                    <definition>good</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>2</code>
+                    <definition>quality not evaluated, not available or unknown</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>3</code>
+                    <definition>questionable/suspect</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>4</code>
+                    <definition>bad</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>secondary_flag</attributeName>
+          <attributeDefinition>Additional documentation of data quality or concerns</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Additional documentation of data quality or concerns</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NA</code>
+            <codeExplanation>No secondary flag</codeExplanation>
+          </missingValueCode>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>23460</numberOfRecords>
+    </dataTable>
+    <otherEntity>
+      <entityName>List of NES-LTER cruises</entityName>
+      <entityDescription>List of NES-LTER cruises</entityDescription>
+      <physical>
+        <objectName>nes-lter-zp-cruises-metadata.csv</objectName>
+        <size unit="bytes">1044</size>
+        <authentication method="MD5">6f7c3c87e0c845f63ba8244e33b62d19</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="numberPer10MeterSquared" multiplierToSI="0.1" name="numberPer10MeterSquared" parentSI="numberPerMeterSquared" unitType="">
+          <description>number of individuals per 10 square meters</description>
+        </unit>
+        <unit id="numberPer100MeterCubed" multiplierToSI="0.001" name="numberPer100MeterCubed" parentSI="numberPerMeterCubed" unitType="">
+          <description>number of individuals per 100 cubic meters</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata>
+    <metadata>
+      <emlEditor>
+        <app>EMLassemblyline</app>
+        <release>3.5.7</release>
+      </emlEditor>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

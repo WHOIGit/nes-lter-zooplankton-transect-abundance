@@ -17,32 +17,157 @@ library(EMLassemblyline)
 library(ediutilities)
 library(here)
 library(lubridate)
-library(readxl) # data provided in ExCEL sheet downloaded from Google sheet
+library(readr) 
 library(dplyr)
- 
+library(tidyr)
+
 ```
 
-Read data table
+Read in data tables
 
 ```{r}
-# data_table <- read.csv(here('nes-lter-minimal.csv'))
-# data_table$date = ymd_hms(data_table$date)
+# do not commit or push the data tables
+staged10_wide <- read_csv("v2/input/nes-lter-zp-abundance-335um-staged10m2.csv")
+staged100_wide <- read_csv("v2/input/nes-lter-zp-abundance-335um-staged100m3.csv")
+unstaged10 <- read_csv("v2/input/nes-lter-zp-abundance-335um-unstaged10m2.csv")
+unstaged100 <- read_csv("v2/input/nes-lter-zp-abundance-335um-unstaged100m3.csv")
 
-# read data table from local file
-# download the latest version from Llopiz lab Google folder
-# do not commit or push the data table
-data_table <- read_excel("nes-lter-zooplankton-transect-abundance-335um_20230531.xlsx", sheet = "data", col_names = TRUE)
-# note this version data table does not include a date column
-# columns with NA's in Google sheet get read in as character
-# change NA strings to NA's
-data_table[data_table == "NA"] <- NA
-# then change those columns to numeric using dplyr functions
-data_table <- data_table %>%
-     mutate(across(MVCO:L11, as.numeric)) 
+# check cruise coverage
+unique(staged10_wide$cruise)
+unique(unstaged10$cruise)
 
-# truncate to two past decimal prior to summary
-data_table <- data_table %>%
-     mutate(across(MVCO:L11, ~ round(., 2))) 
+```
+Pivot the staged tables
+
+```{r}
+
+# Surface area haul factor
+staged10_count <- staged10_wide |> pivot_longer(cols = c("adult_count", "c5_count", "c4_count", "c3_count", "c2_count", "c1_count", "cryptopia_count", "furcilia_count", "calyptopis_count", "nauplius_count", "unknown_count"), names_to = "stage", values_to = "stage_count")
+staged10_haul <- staged10_wide |> pivot_longer(cols = c("adult_10m2", "c5_10m2", "c4_10m2", "c3_10m2", "c2_10m2", "c1_10m2", "cryptopia_10m2", "furcilia_10m2", "calyptopis_10m2", "nauplius_10m2", "unknown_10m2"), names_to = "stage_10m2", values_to = "stage_abundance_10m2")
+staged10_count <- staged10_count |> select("cruise", "station", "cast" ,"datetime_utc", "day_night","sample_split_factor", "volume_ml","zoo_aliquot", "haul_factor", "taxa_code", "taxa_name", "conc_10m2", "zooplankton_count","totcnt", "primary_flag","secondary_flag" ,"stage","stage_count")  
+staged10_haul <- staged10_haul |> select("cruise", "station", "cast" ,"datetime_utc", "day_night","sample_split_factor", "volume_ml","zoo_aliquot", "haul_factor", "taxa_code", "taxa_name", "conc_10m2", "zooplankton_count","totcnt", "primary_flag","secondary_flag" ,"stage_10m2","stage_abundance_10m2") 
+staged10_haul_cols <- staged10_haul |> select("stage_10m2","stage_abundance_10m2") 
+staged10 <- cbind(staged10_count, staged10_haul_cols)
+staged10$stage <- gsub("_count", "", staged10$stage)
+staged10 <- staged10 |>
+  select(-stage_10m2, -volume_ml) |>
+  rename(date_time_utc = datetime_utc) |>
+  rename(aliquot_factor = zoo_aliquot) |>
+  rename(haul_factor_10m2_335 = haul_factor) |>
+  relocate(haul_factor_10m2_335, .before = sample_split_factor) |>
+  rename(taxon_code = taxa_code) |>
+  rename(taxon_name = taxa_name) |>
+  rename(taxon_abundance_10m2 = conc_10m2) |>
+  rename(taxon_count = zooplankton_count) |>
+  rename(total_count = totcnt) |>
+  relocate(total_count, .before = taxon_code) |>
+  relocate(taxon_count, .after = taxon_name) |>
+  relocate(primary_flag, .after = stage_abundance_10m2) |>
+  relocate(secondary_flag, .after = primary_flag)
+
+staged10 <- staged10 |>
+  mutate(haul_factor_10m2_335 = round(haul_factor_10m2_335, 3)) |>
+  mutate(taxon_abundance_10m2 = round(taxon_abundance_10m2, 3)) |>
+  mutate(stage_abundance_10m2 = round(stage_abundance_10m2, 3))
+
+staged10$secondary_flag <- gsub(",", "", staged10$secondary_flag)
+
+write_csv(staged10, "nes-lter-zooplankton-transect-abundance-335um-staged10m2.csv")
+
+# get header and stage names for metadata template
+# headers_staged10 <- as.data.frame(names(staged10))
+# write_csv(headers_staged10, "headers-staged10m2.csv")
+# stages <- as.data.frame(unique(staged10$stage))
+# write_csv(stages, "stages.csv")
+
+```
+
+```{r}
+
+staged100_count <- staged100_wide |> pivot_longer(cols = c("adult_count", "c5_count", "c4_count", "c3_count", "c2_count", "c1_count", "cryptopia_count", "furcilia_count", "calyptopis_count", "nauplius_count", "unknown_count"), names_to = "stage", values_to = "stage_count")
+staged100_haul <- staged100_wide |> pivot_longer(cols = c("adult_100m3", "c5_100m3", "c4_100m3", "c3_100m3", "c2_100m3", "c1_100m3", "cryptopia_100m3", "furcilia_100m3", "calyptopis_100m3", "nauplius_100m3", "unknown_100m3"), names_to = "stage_100m3", values_to = "stage_abundance_100m3")
+staged100_count <- staged100_count |> select("cruise", "station", "cast" ,"datetime_utc", "day_night","sample_split_factor", "volume_ml","zoo_aliquot", "haul_factor", "taxa_code", "taxa_name", "conc_100m3", "zooplankton_count","totcnt", "primary_flag","secondary_flag" ,"stage","stage_count")  
+staged100_haul <- staged100_haul |> select("cruise", "station", "cast" ,"datetime_utc", "day_night","sample_split_factor", "volume_ml","zoo_aliquot", "haul_factor", "taxa_code", "taxa_name", "conc_100m3", "zooplankton_count","totcnt", "primary_flag","secondary_flag" ,"stage_100m3","stage_abundance_100m3") 
+staged100_haul_cols <- staged100_haul |> select("stage_100m3","stage_abundance_100m3") 
+staged100 <- cbind(staged100_count, staged100_haul_cols)
+staged100$stage <- gsub("_count", "", staged100$stage)
+staged100 <- staged100 |>
+  select(-stage_100m3, -volume_ml) |>
+  rename(date_time_utc = datetime_utc) |>
+  rename(aliquot_factor = zoo_aliquot) |>
+  rename(haul_factor_100m3_335 = haul_factor) |>
+  relocate(haul_factor_100m3_335, .before = sample_split_factor) |>
+  rename(taxon_code = taxa_code) |>
+  rename(taxon_name = taxa_name) |>
+  rename(taxon_abundance_100m3 = conc_100m3) |>
+  rename(taxon_count = zooplankton_count) |>
+  relocate(taxon_count, .after = taxon_name) |>
+  rename(total_count = totcnt) |>
+  relocate(total_count, .before = taxon_code) |>
+  relocate(primary_flag, .after = stage_abundance_100m3) |>
+  relocate(secondary_flag, .after = primary_flag)
+
+staged100 <- staged100 |>
+  mutate(haul_factor_100m3_335 = round(haul_factor_100m3_335, 3)) |>
+  mutate(taxon_abundance_100m3 = round(taxon_abundance_100m3, 3)) |>
+  mutate(stage_abundance_100m3 = round(stage_abundance_100m3, 3))
+
+staged100$secondary_flag <- gsub(",", "", staged100$secondary_flag)
+
+write_csv(staged100, "nes-lter-zooplankton-transect-abundance-335um-staged100m3.csv")
+
+```
+Organize columns in unstaged tables
+
+```{r}
+
+unstaged10 <- unstaged10 |>
+  select(-volume_ml) |>
+  rename(date_time_utc = datetime_utc) |>
+  rename(aliquot_factor = zoo_aliquot) |>
+  rename(haul_factor_10m2_335 = haul_factor) |>
+  relocate(haul_factor_10m2_335, .before = sample_split_factor) |>
+  rename(taxon_code = taxa_code) |>
+  rename(taxon_name = taxa_name) |>
+  rename(taxon_abundance_10m2 = conc_10m2) |>
+  rename(taxon_count = zooplankton_count) |>
+  relocate(taxon_count, .after = taxon_name) |>
+  rename(total_count = totcnt) |>
+  relocate(total_count, .before = taxon_code) 
+
+unstaged10 <- unstaged10 |>
+  mutate(haul_factor_10m2_335 = round(haul_factor_10m2_335, 3)) |>
+  mutate(taxon_abundance_10m2 = round(taxon_abundance_10m2, 3)) 
+
+unstaged10$secondary_flag <- gsub(",", "", unstaged10$secondary_flag)
+
+write_csv(unstaged10, "nes-lter-zooplankton-transect-abundance-335um-unstaged10m2.csv")
+
+# get header and stage names for metadata template
+# headers_unstaged10 <- as.data.frame(names(unstaged10))
+# write_csv(headers_unstaged10, "headers-unstaged10m2.csv")
+
+unstaged100 <- unstaged100 |>
+  select(-volume_ml) |>
+  rename(date_time_utc = datetime_utc) |>
+  rename(aliquot_factor = zoo_aliquot) |>
+  rename(haul_factor_100m3_335 = haul_factor) |>
+  relocate(haul_factor_100m3_335, .before = sample_split_factor) |>
+  rename(taxon_code = taxa_code) |>
+  rename(taxon_name = taxa_name) |>
+  rename(taxon_abundance_100m3 = conc_100m3) |>
+  rename(taxon_count = zooplankton_count) |>
+  relocate(taxon_count, .after = taxon_name) |>
+  rename(total_count = totcnt) |>
+  relocate(total_count, .before = taxon_code) 
+
+unstaged100 <- unstaged100 |>
+  mutate(haul_factor_100m3_335 = round(haul_factor_100m3_335, 3)) |>
+  mutate(taxon_abundance_100m3 = round(taxon_abundance_100m3, 3)) 
+
+unstaged100$secondary_flag <- gsub(",", "", unstaged100$secondary_flag)
+
+write_csv(unstaged100, "nes-lter-zooplankton-transect-abundance-335um-unstaged100m3.csv")
 
 ```
 
@@ -50,20 +175,14 @@ Generate basic summary of data table
 
 ```{r}
 # Just for inspecting the summary: change all character columns to factor
-DF <- data_table
-DF[sapply(DF, is.character)] <- lapply(DF[sapply(DF, is.character)], as.factor)
-summary(DF)
+S10 <- staged10
+S10[sapply(S10, is.character)] <- lapply(S10[sapply(S10, is.character)], as.factor)
+summary(S10)
+
+US10 <- unstaged10
+US10[sapply(US10, is.character)] <- lapply(US10[sapply(US10, is.character)], as.factor)
+summary(US10)
 # summary(data_table)
-
-```
-
-Write data table to csv
-
-```{r}
-
-# can write to csv because the data_table is already clean and ready to submit
-# do not commit or push the data table
-write.csv(data_table, 'nes-lter-zooplankton-transect-abundance-335um.csv', row.names=FALSE)
 
 ```
 
@@ -71,36 +190,61 @@ Read the Excel metadata template and generate text templates used by
 EMLassemblyline
 
 ```{r}
-# excel_to_template(here('nes-lter-minimal-info'), 'nes-lter-minimal', rights='CC0')
-# to prepare the -info.xlsx file download the latest version from Llopiz lab Google folder
-# then delete the data sheet and save with filename -info
-excel_to_template(here('nes-lter-zooplankton-transect-abundance-335um-info'), 'nes-lter-zooplankton-transect-abundance-335um', rights='CCBY')
+
+excel_template <- 'nes-lter-zooplankton-transect-abundance-info.xlsx'
+
+sheet_to_tsv(excel_template, 'ColumnHeadersStaged10m2', 'attributes_nes-lter-zooplankton-transect-abundance-335um-staged10m2.txt') 
+sheet_to_tsv(excel_template, 'ColumnHeadersStaged100m3', 'attributes_nes-lter-zooplankton-transect-abundance-335um-staged100m3.txt')
+sheet_to_tsv(excel_template, 'CategoricalVariables','catvars_nes-lter-zooplankton-transect-abundance-335um-staged10m2.txt')
+sheet_to_tsv(excel_template, 'CategoricalVariables', 'catvars_nes-lter-zooplankton-transect-abundance-335um-staged100m3.txt')
+ 
+sheet_to_tsv(excel_template, 'ColumnHeadersUnstaged10m2', 'attributes_nes-lter-zooplankton-transect-abundance-335um-unstaged10m2.txt') 
+sheet_to_tsv(excel_template, 'ColumnHeadersUnstaged100m3', 'attributes_nes-lter-zooplankton-transect-abundance-335um-unstaged100m3.txt')
+sheet_to_tsv(excel_template, 'CategoricalVariables','catvars_nes-lter-zooplankton-transect-abundance-335um-unstaged10m2.txt')
+sheet_to_tsv(excel_template, 'CategoricalVariables', 'catvars_nes-lter-zooplankton-transect-abundance-335um-unstaged100m3.txt')
+
+sheet_to_tsv(excel_template, 'Personnel', 'personnel.txt')
+
+sheet_to_tsv(excel_template, 'Keywords', 'keywords.txt')
+
+sheet_to_tsv(excel_template, 'CustomUnits', 'custom_units.txt')
+
+```
+
+Use templates in "template core metadata" step from EML assembly line
+
+```{r}
+
+template_core_metadata(path=here(), license='CCBY', file.type = ".md")
+
+datatables <- c('nes-lter-zooplankton-transect-abundance-335um-staged10m2.csv', 'nes-lter-zooplankton-transect-abundance-335um-staged100m3.csv', 'nes-lter-zooplankton-transect-abundance-335um-unstaged10m2.csv', 'nes-lter-zooplankton-transect-abundance-335um-unstaged100m3.csv' )
+descriptions <- c('Staged zooplankton count and abundance at 10m2 haul factor', 'Staged zooplankton count and abundance at 100m3 haul factor', 'Unstaged zooplankton count and abundance at 10m2 haul factor', 'Unstaged zooplankton count and abundance at 100m3 haul factor')
+tablenames <- c('abundance-335um-staged10m2', 'abundance-335um-staged100m3', 'abundance-335um-unstaged10m2', 'abundance-335um-unstaged100m3')
 
 ```
 Generate the package and insert the parent project node into the resulting EML
 
 ```{r}
 # package ID 25
-pkg_id <- 'knb-lter-nes.25.1'
+pkg_id <- 'knb-lter-nes.25.2'
 
 make_eml(here(),
          dataset.title='Zooplankton abundance from net tows on Northeast U.S. Shelf Long Term Ecological Research (NES-LTER) Transect cruises, ongoing since 2018',
-         data.table='nes-lter-zooplankton-transect-abundance-335um.csv',
-         data.table.description='Zooplankton abundance from bongo tows with 335 micron mesh net on NES-LTER Transect cruises',
-         data.table.name = 'nes-lter-zooplankton-transect-abundance-335um',
-# do not commit or push the other entity
-         other.entity = 'NES-LTER_TOW_data.csv', # prepare csv as subset of NES-LTER_TOW_data Google sheet
-         other.entity.name = 'NES-LTER tow metadata',
-         other.entity.description = 'Supplemental table for the tow metadata',         
-#         temporal.coverage = temporal_coverage(data_table$date),
-         temporal.coverage = c('2018-01-31', '2020-10-18'), # from NES-LTER_TOW_data
+        data.table= datatables,  
+         data.table.description = descriptions,
+         data.table.name = tablenames,
+         other.entity = 'nes-lter-zp-cruises-metadata.csv',
+         other.entity.name = 'List of NES-LTER cruises',
+         other.entity.description = 'List of NES-LTER cruises',         
+         temporal.coverage = temporal_coverage(staged10$date_time_utc),
+         #temporal.coverage = c('2018-01-31', '2020-10-18'), # from NES-LTER_TOW_data
          geographic.description = "NES-LTER Transect",
-#         geographic.coordinates = geographic_coordinates(data_table$latitude, data_table$longitude),
-         geographic.coordinates = c(41.5240, -70.8739, 39.7596, -71.1344), # from NES-LTER_TOW_data
+         #         geographic.coordinates = geographic_coordinates(data_table$latitude, data_table$longitude),
+         geographic.coordinates = c(41.5240, -70.8739, 39.7596, -71.1344), # from NES-LTER_TOW_data in v1
          maintenance.description = "ongoing",
          user.id = "NES",
          user.domain = "LTER",
          package.id = pkg_id)
 
-project_insert(pkg_id,'parent_project_RAPID.xml')
+project_insert(pkg_id,'parent_project_NESI-II_RAPID.xml')
 ```

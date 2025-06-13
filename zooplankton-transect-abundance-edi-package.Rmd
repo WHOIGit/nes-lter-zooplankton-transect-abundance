@@ -1,7 +1,7 @@
 ---
 title: "NES-LTER zooplankton transect abundance"
-author: "Stace Beaulieu"
-date: "2023-05-31"
+author: "Stace Beaulieu, Kate Morkeski"
+date: "2025-06-13"
 output: html_notebook
 ---
 

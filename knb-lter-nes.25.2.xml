@@ -77,15 +77,23 @@
       <keywordThesaurus>LTER Core Research Areas</keywordThesaurus>
     </keywordSet>
     <keywordSet>
+      <keyword>ecology</keyword>
       <keyword>zooplankton</keyword>
       <keyword>abundance</keyword>
       <keyword>transects</keyword>
       <keyword>marine</keyword>
       <keyword>oceanography</keyword>
+      <keyword>plankton</keyword>
+      <keyword>species interactions</keyword>
+      <keyword>population dynamics</keyword>
+      <keyword>seasonality</keyword>
+      <keyword>spatial variability</keyword>
       <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
     </keywordSet>
     <keywordSet>
       <keyword>Bongo net</keyword>
+      <keyword>Unspecified Folsom Plankton sample splitter - McEwen et al. 1954</keyword>
+      <keyword>Star-Oddi DST centi-TD Temperature and Depth Recorder</keyword>
       <keywordThesaurus>SeaVoX Device Catalogue</keywordThesaurus>
     </keywordSet>
     <keywordSet>
